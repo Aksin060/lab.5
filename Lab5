@@ -1,0 +1,21 @@
+import random
+
+n = int(input("Siyahının elementlərinin sayını daxil edin: "))
+
+numbers = [random.randint(-12, 24) for _ in range(n)]
+
+print("Yaradılmış siyahı:")
+print(numbers)
+
+product = 1
+has_negative = False 
+
+for num in numbers:
+    if num < 0:
+        product *= num
+        has_negative = True
+
+if has_negative:
+    print("Mənfi elementlərin hasili:", product)
+else:
+    print("Siyahıda mənfi element yoxdur.")
